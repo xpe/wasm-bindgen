@@ -5,6 +5,10 @@
 
 ### Added
 
+* Allow exporting functions named `default`. Throw error in wasm-bindgen-cli if --target web and
+  an exported symbol is named `default`.
+  [#3930](https://github.com/rustwasm/wasm-bindgen/pull/3930)
+
 * Added support for arbitrary expressions when using `#[wasm_bindgen(typescript_custom_section)]`.
   [#3901](https://github.com/rustwasm/wasm-bindgen/pull/3901)
 
@@ -45,8 +49,11 @@
 * Fix MSRV compilation.
   [#3927](https://github.com/rustwasm/wasm-bindgen/pull/3927)
 
-* Fixed `clippy::empty_docs` lint.
+* Fix `clippy::empty_docs` lint.
   [#3946](https://github.com/rustwasm/wasm-bindgen/pull/3946)
+
+* Fix missing target features in module when enabling reference types or multi-value transformation.
+  [#3967](https://github.com/rustwasm/wasm-bindgen/pull/3967)
 
 --------------------------------------------------------------------------------
 
